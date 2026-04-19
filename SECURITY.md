@@ -2,8 +2,10 @@
 
 ## Reporting a Vulnerability
 
-If you discover a security issue, please report it privately to the maintainers.
+If you discover a security issue, please report it privately using one of the following channels:
 
+- Email: `security@example.com` **(placeholder: replace with the project's real security contact)**
+- GitHub Security Advisories: `https://github.com/OWNER/REPO/security/advisories/new` **(placeholder: replace `OWNER/REPO` with this repository)**
 Please include:
 
 - a description of the vulnerability
