@@ -25,5 +25,5 @@ Inappropriate behavior may result in warnings, temporary bans, or permanent remo
 
 ## Reporting
 
-Report incidents to the repository maintainers via private channels where possible.
+Report incidents to the repository maintainers at [INSERT-CONTACT-EMAIL], or through another private reporting channel designated by the maintainers.
 All reports will be reviewed and handled promptly and fairly.
