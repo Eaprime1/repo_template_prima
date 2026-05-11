@@ -44,7 +44,7 @@ if [ -d "$DOTFILES_DIR" ]; then
         if [ -e "$dest" ]; then
             echo "  SKIP $fname (already exists at $dest)"
         else
-            cp "$src" "$dest"
+            cp -R "$src" "$dest"
             echo "  OK   $fname → $dest"
         fi
     done
