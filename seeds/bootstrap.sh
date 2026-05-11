@@ -16,7 +16,15 @@ echo "==> Prima Terminal: bootstrapping..."
 # Reads seeds/packages.yaml for manager + required packages.
 PREFERRED_MANAGER=""
 if [ -f "$PACKAGES_FILE" ]; then
-    PREFERRED_MANAGER="$(awk -F': *' '/^manager:/ {print $2; exit}' "$PACKAGES_FILE" | tr -d "\"'")"
+    PREFERRED_MANAGER="$(awk -F': *' '
+        /^manager:/ {
+            value=$2
+            gsub(/[[:space:]]+$/, "", value)
+            gsub(/["\047]/, "", value)
+            print value
+            exit
+        }
+    ' "$PACKAGES_FILE")"
 fi
 
 if [ -n "$PREFERRED_MANAGER" ] && [ "$PREFERRED_MANAGER" != "auto" ]; then
@@ -49,7 +57,7 @@ if [ -f "$PACKAGES_FILE" ]; then
         /^required:[[:space:]]*$/ { in_required=1; next }
         in_required && /^[[:space:]]*-[[:space:]]*/ {
             sub(/^[[:space:]]*-[[:space:]]*/, "", $0)
-            gsub(/["'\'']/, "", $0)
+            gsub(/["\047]/, "", $0)
             print $0
             next
         }
