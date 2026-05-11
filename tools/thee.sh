@@ -18,16 +18,7 @@ if [[ ! -f "$INCOMING" ]]; then
   exit 1
 fi
 
-cat >> "$INCOMING" << EOF
-
----
-received: $TIMESTAMP
-fragment: $FRAGMENT
-the what:
-yod mark:
-ember:     warm
----
-EOF
+printf "\n---\nreceived: %s\nfragment: %s\nthe what:\nyod mark:\nember:     warm\n---\n" "$TIMESTAMP" "$FRAGMENT" >> "$INCOMING"
 
 echo ""
 echo "THEE received: \"$FRAGMENT\""
