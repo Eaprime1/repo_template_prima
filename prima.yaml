@@ -1,5 +1,6 @@
 # prima.yaml — Concept Manifest
 # Fill this in when you fork the template.
+# Run: bash tools/scan_lexeme.sh to find unfilled placeholders.
 
 concept:
   name: "My Prima Terminal"        # display name of this concept
@@ -13,19 +14,17 @@ author:
   contact: ""                      # optional — email, url, or @handle
 
 runtime:
-  # Termux is the system resource — list what this concept needs from it.
   platform: "termux"               # termux | linux | macos | any
   min_android_api: 24              # Termux only — omit for other platforms
-  required_packages: []            # apt/pkg package names
+  required_packages: []
   optional_packages: []
 
 unexusi:
   profile_version: "1.0"
-  # Path to the connection spec for the Unexusi identity layer.
   spec: "unexusi/connect.yaml"
 
 quests:
-  start: "quests/example/001-awakening.md"   # the first quest players receive
+  start: "quests/000-thee-the-door.md"   # first quest — name the concept
   format_spec: "quests/QUEST_SCHEMA.md"
 
 world:
@@ -35,3 +34,24 @@ world:
 seeds:
   bootstrap: "seeds/bootstrap.sh"
   packages: "seeds/packages.yaml"
+
+intake:
+  door: "intake/README.md"
+  incoming: "intake/incoming.md"
+  triad: "intake/triad-thee-yod-ember.md"
+
+turns:
+  schema: "turns/TURN_SCHEMA.md"
+  log: "turns/log.md"
+
+prime:
+  state: ".prime"
+  check: "tools/prime_check.sh"
+
+tools:
+  thee: "tools/thee.sh"
+  yod: "tools/yod.sh"
+  ember: "tools/ember.sh"
+  prime_check: "tools/prime_check.sh"
+  scan_lexeme: "tools/scan_lexeme.sh"
+  ethics_check: "tools/ethics_check.md"
