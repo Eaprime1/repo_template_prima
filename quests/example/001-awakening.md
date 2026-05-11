@@ -7,8 +7,7 @@ xp: 50
 difficulty: novice
 estimated_time: "10m"
 requires: []
-unlocks:
-  - example/002-first-footsteps
+unlocks: []
 tags:
   - orientation
   - filesystem
@@ -83,3 +82,5 @@ The `-l` flag gives you a long listing (permissions, owner, size). The `-a` flag
 shows hidden files (names that start with a dot). Together, `-la` shows everything.
 Focus on the file names in the rightmost column for now.
 </details>
+
+☯

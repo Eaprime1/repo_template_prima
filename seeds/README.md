@@ -22,7 +22,7 @@ The bootstrap script is idempotent — safe to run more than once.
 
 ## Dotfiles
 
-Files in `seeds/dotfiles/` are symlinked or copied to `~/` during bootstrap.
+Files in `seeds/dotfiles/` are copied to `~/` during bootstrap.
 Name them with a leading dot as they should appear at the destination:
 
 ```
@@ -36,3 +36,5 @@ seeds/dotfiles/.prima-env      → ~/.prima-env
 Seeds should be **minimal and additive** — they should not overwrite existing
 config without checking. A player's home directory may already have things in it.
 When in doubt, append rather than replace.
+
+☯

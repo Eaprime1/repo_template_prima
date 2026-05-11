@@ -1,7 +1,7 @@
 # packages.yaml — Concept Package Reference
 # List packages this concept requires or recommends.
-# This file is currently documentation for maintainers; the bootstrap script
-# installs its own hard-coded defaults and does not read this file.
+
+manager: auto
 
 required:
   # Packages that must be installed for any quest to function.
@@ -18,3 +18,4 @@ optional:
 
 # Add new packages here as quests require them.
 # Group by arc if the list grows large.
+# ☯
