@@ -23,7 +23,7 @@ echo ""
 
 FOUND=0
 for PATTERN in "${PATTERNS[@]}"; do
-  MATCHES=$(grep -rin "$PATTERN" "$ROOT" \
+  MATCHES=$(grep -rFin -- "$PATTERN" "$ROOT" \
     --include="*.md" --include="*.sh" --include="*.yaml" --include="*.json" \
     --exclude-dir=".git" 2>/dev/null || true)
   if [[ -n "$MATCHES" ]]; then
